@@ -14,7 +14,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class javafxoperation extends Application {
+public class javafxopration extends Application {
 
     private final String url = "jdbc:oracle:thin:@localhost:1521:xe";
     private final String user = "system";
