@@ -374,8 +374,8 @@ public class javacrud {
                 "BEFORE INSERT OR UPDATE ON EMP\n" +
                 "FOR EACH ROW\n" +
                 "BEGIN\n" +
-                "  IF :NEW.SAL IS NULL OR :NEW.SAL = 0 THEN\n" +
-                "    RAISE_APPLICATION_ERROR(-20001, 'Salary must not be zero or null');\n" +
+                "  IF :NEW.SAL < 0 THEN\n" +
+                "    RAISE_APPLICATION_ERROR(-20001, 'Salary must not be below zero');\n" +
                 "  END IF;\n" +
                 "END;";
 
@@ -388,3 +388,5 @@ public class javacrud {
         }
     }
 }
+
+
